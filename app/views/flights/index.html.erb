@@ -3,6 +3,7 @@
   <h1><%=flight.number%></h1>
     <%flight.passengers.each do |passenger| %>
       <%=passenger.name %>
+      <%= link_to "Remove #{passenger.name} from flight", "flights/passengers/#{passenger.id}/remove", method: :delete %>
     <%end %>
   </section>
 <%end %>
