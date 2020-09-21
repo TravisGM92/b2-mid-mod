@@ -6,7 +6,7 @@ class FlightsController < ApplicationController
 
   def destroy
     pass = Passenger.find(params[:id])
-    PassengerFlight.where(passenger_id: params[:id])[0].destroy
+    PassengerFlight.where(passenger_id: params[:id]).first.destroy
     redirect_to("/flights")
   end
 end
