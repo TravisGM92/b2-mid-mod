@@ -27,7 +27,7 @@ describe Airline, type: :model do
       passenger_6 = flight_3.passengers.create(name: "Liza Fred", age: 53)
       passenger_7 = flight_1.passengers.create(name: "Lisa Carn", age: 53)
 
-      expected = [passenger_1.name, passenger_2.name, passenger_3.name, passenger_4.name]
+      expected = [passenger_1.name, passenger_2.name, passenger_4.name, passenger_3.name]
       expect(airline_1.unique_passengers).to eq(expected)
     end
   end
