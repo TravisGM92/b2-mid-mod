@@ -31,7 +31,7 @@ RSpec.describe 'Passenger index page' do
       end
 
       within "#passenger-#{passenger_4.id}" do
-        expect(page).to have_content(passenger_1.name)
+        expect(page).to have_content(passenger_4.name)
         expect(page).to have_content("Number of flights: #{passenger_4.flights.length}")
       end
     end
